@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Tabuleiro;
+using tabuleiro;
 
-namespace xadrez_console.Tabuleiro {
+namespace tabuleiro {
     internal class Peca {
         public Posicao Posicao { get; set; }
         public Cor Cor { get; protected set; }
