@@ -1,5 +1,5 @@
 ﻿using System;
-using Tabuleiro.Exception;
+using tabuleiro.Exception;
 
 namespace tabuleiro {
     internal class Tabuleiro {
