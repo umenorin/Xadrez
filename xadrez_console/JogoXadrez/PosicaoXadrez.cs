@@ -11,7 +11,7 @@ namespace JogoXadrez {
         }
 
         public Posicao ToPosicao() {
-            return new Posicao(8 -  Coluna, 8 - 'a');
+            return new Posicao(8 -  Linha, Coluna - 'a');
         }
 
         public override string ToString() {

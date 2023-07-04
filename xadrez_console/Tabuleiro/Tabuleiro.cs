@@ -21,25 +21,35 @@ namespace tabuleiro {
             return Pecas[pos.Linha, pos.Coluna];
         }
 
-        public bool existePeca(Posicao pos) {
-            if (existePeca(pos))
-                throw new tabuleiroException("ja existe uma peca nessa posicao");
-            validarPosicao(pos);
+        public bool ExistePeca(Posicao pos) {
+            ValidarPosicao(pos);
             return Peca(pos) != null;
         }
 
-        public void colocarPeca(Peca p, Posicao pos) {
-            Pecas[pos.Linha,pos.Coluna] = p;
+        public void ColocarPeca(Peca p, Posicao pos) {
+            if (ExistePeca(pos)) {
+                throw new tabuleiroException("Ja existe uma peca nesta posicao");
+            }
+            Pecas[pos.Linha, pos.Coluna] = p;
             p.Posicao = pos;
         }
 
-        public bool posicaoValida(Posicao pos) {
+        public Peca RetirarPeca(Posicao pos) {
+            if (Peca(pos) == null)
+                return null;
+            Peca aux = Peca(pos);
+            aux.Posicao = null;
+            Pecas[pos.Linha, pos.Coluna] = null;
+            return aux;
+        }
+
+        public bool PosicaoValida(Posicao pos) {
             if(pos.Linha < 0|| pos.Linha>=Linha|| pos.Coluna<0 || pos.Coluna>=Coluna) 
                 return false;
             return true;
         }
-        public void validarPosicao(Posicao pos) {
-            if (!posicaoValida(pos))
+        public void ValidarPosicao(Posicao pos) {
+            if (!PosicaoValida(pos))
                 throw new tabuleiroException("Posicao invalida");
         }
     }
