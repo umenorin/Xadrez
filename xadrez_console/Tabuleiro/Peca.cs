@@ -8,11 +8,11 @@ namespace tabuleiro {
         public int QteMovimentos { get; protected set; }
         public Tabuleiro Tabuleiro { get; protected set; }
 
-        public Peca(Posicao posicao, Cor cor,int qteMovimentos, Tabuleiro tabuleiro) { 
-            Posicao = posicao;
+        public Peca( Cor cor, Tabuleiro tab) { 
+            Posicao = null;
             Cor = cor;
-            QteMovimentos = qteMovimentos;
-            Tabuleiro = tabuleiro;
+            QteMovimentos = 0;
+            Tabuleiro = tab;
         }
     }
 }

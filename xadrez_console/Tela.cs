@@ -10,7 +10,7 @@ namespace xadrez_console {
                     if (tabuleiro.Peca(i, j) == null) {
                         Console.Write("- ");
                     }
-                    Console.Write(tabuleiro.Peca(i, j) + " ");
+                    Console.Write(tabuleiro.Peca(i, j) + "");
                 }
                 Console.WriteLine();
             }
