@@ -4,9 +4,14 @@ namespace tabuleiro {
         public int Linha { get; set; }
         public int Coluna { get; set; }
 
-        public Posicao(int linha, int colina) { 
+        public Posicao(int linha, int coluna) { 
             Linha = linha;
-            Coluna = colina;
+            Coluna = coluna;
+        }
+
+        public void DefinirValores(int linha, int coluna) {
+            Linha = linha;
+            Coluna = coluna;
         }
 
         public override string ToString() {
