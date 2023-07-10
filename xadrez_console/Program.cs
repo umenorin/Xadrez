@@ -9,10 +9,7 @@ try {
     while (!partida.Terminada) {
         try {
             Console.Clear();
-            Tela.imprimirTabuleiro(partida.Tab);
-            Console.WriteLine();
-            Console.WriteLine("Turno: " + partida.Turno);
-            Console.WriteLine("Aguardando jogada: " + partida.JogadorAtual);
+            Tela.ImprimirPartida(partida);
 
             Console.WriteLine();
             Console.Write("Origem: ");
@@ -28,7 +25,7 @@ try {
             Posicao destino = Tela.LerPosicaoXadrez().ToPosicao();
             partida.ValidarPosicaoDeDestino(origem, destino);
 
-            partida.ExecutaMovimento(origem, destino);
+            partida.RealizaJogada(origem, destino);
         } catch (tabuleiroException e) {
             Console.WriteLine(e.Message);
             Console.ReadLine();
