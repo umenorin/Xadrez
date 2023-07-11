@@ -52,7 +52,7 @@ namespace xadrez_console {
                     Tela.imprimirPeca(tabuleiro.Peca(i, j));
                     Console.Write("");                  
                 }
-                Console.WriteLine();
+                Console.WriteLine(" ");
             }
             Console.WriteLine("  a b c d e f g h");
         }
