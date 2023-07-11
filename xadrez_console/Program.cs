@@ -31,7 +31,8 @@ try {
             Console.ReadLine();
         }
     }
-    Tela.imprimirTabuleiro(partida.Tab);
+    Console.Clear();
+    Tela.ImprimirPartida(partida);
 } catch (tabuleiroException e) {
     Console.WriteLine(e.Message);
 }
