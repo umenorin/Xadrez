@@ -29,6 +29,9 @@ try {
         } catch (tabuleiroException e) {
             Console.WriteLine(e.Message);
             Console.ReadLine();
+        } catch (IndexOutOfRangeException e) {
+            Console.WriteLine("localizacao invalida");
+            Console.ReadLine();
         }
     }
     Console.Clear();
